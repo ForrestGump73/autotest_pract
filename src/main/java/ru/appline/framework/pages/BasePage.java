@@ -132,6 +132,16 @@ public class BasePage {
     }
 
 
+    /**
+     * Явное ожидание того что элемент станет видимым
+     *
+     * @param xpath - локатор элемента, которого мы ожидаем увидеть в DOM страницы и визуально.
+     */
+    protected WebElement waitVisibilityOfElementLocated(String xpath) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+    }
+
+
 
 
 

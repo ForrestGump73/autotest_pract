@@ -50,29 +50,44 @@ public class ProductsPage extends BasePage {
     @FindBy(xpath = "//tbody/tr[last()]/td[3]")
     private WebElement lastProductExotic;
 
+    @FindBy(xpath = "//tbody/tr[last()]/th")
+    private WebElement lastProductID;
 
-    public ProductsPage selectBaseMenu(){
-        waitUtilElementToBeClickable(dropMenu);
-        dropMenu.click();
-        return this;
-    }
 
+    /**
+     * Метод проверяет нахождение на странице Товары
+     */
     public ProductsPage checkOpenProductsPage() {
+        waitVisibilityOfElementLocated("//h5[text() = 'Список товаров']");
         Assertions.assertEquals("Список товаров", title.getText());
         return this;
     }
 
+
+    /**
+     * Метод нажимает на кнопку "Добавить"
+     */
     public ProductsPage selectButtonEdit() {
         scrollToElementJs(btnEdit);
         waitUtilElementToBeClickable(btnEdit).click();
         return this;
     }
 
+
+    /**
+     * Метод проверяет открытие модального окна "Добавление товара"
+     */
     public ProductsPage checkOpenAddProduct() {
         Assertions.assertEquals("modal fade show", editModal.getAttribute("class"));
         return this;
     }
 
+
+    /**
+     * Метод заполняет поле "Наименование"
+     *
+     * @param value  Наименование продукта
+     */
     public ProductsPage fillFieldName(String value) {
         scrollToElementJs(fieldName);
         waitUtilElementToBeClickable(fieldName).click();
@@ -80,6 +95,11 @@ public class ProductsPage extends BasePage {
         return this;
     }
 
+    /**
+     * Метод выбирает тип Продукта
+     *
+     * @param value  Тип продукта
+     */
     public ProductsPage selectTypeOfProduct(String value) {
         scrollToElementJs(selectType);
         waitUtilElementToBeClickable(selectType).click();
@@ -96,6 +116,9 @@ public class ProductsPage extends BasePage {
         return this;
     }
 
+    /**
+     * Метод включает чекбокс Экзотический
+     */
     public ProductsPage checkboxExoticOn() {
         if (!checkboxExotic.isSelected()) {
             checkboxExotic.click();
@@ -104,6 +127,9 @@ public class ProductsPage extends BasePage {
 
     }
 
+    /**
+     * Метод выключает чекбокс Экзотический
+     */
     public ProductsPage checkboxExoticOff() {
         if (checkboxExotic.isSelected()) {
             checkboxExotic.click();
@@ -112,10 +138,49 @@ public class ProductsPage extends BasePage {
 
     }
 
+
+    /**
+     * Метод добавляет продукт в БД
+     */
     public ProductsPage saveProduct() {
         scrollToElementJs(btnSave);
         waitUtilElementToBeClickable(btnSave).click();
         return this;
     }
 
+
+    /**
+     * Проверка соответствия Наименования добавленного товара требуемому значению
+     *
+     * @param value требуемое наименование товара
+     */
+    public ProductsPage checkLastProductName(String value) {
+        waitVisibilityOfElementLocated("//tbody/tr[last()]/td[1]");
+        Assertions.assertEquals(value,lastProductName.getText());
+        return this;
+    }
+
+
+    /**
+     * Проверка соответствия Типа добавленного товара требуемому значению
+     *
+     *@param value требуемый тип товара
+     */
+    public ProductsPage checkLastProductType(String value) {
+        waitVisibilityOfElementLocated("//tbody/tr[last()]/td[2]");
+        Assertions.assertEquals(value,lastProductType.getText());
+        return this;
+    }
+
+
+    /**
+     * Проверка соответствия Экзотичности добавленного товара требуемому значению
+     *
+     * @param value требуемая экзотичность товара
+     */
+    public ProductsPage checkLastProductExotic(String value) {
+        waitVisibilityOfElementLocated("//tbody/tr[last()]/td[3]");
+        Assertions.assertEquals(value,lastProductExotic.getText());
+        return this;
+    }
 }

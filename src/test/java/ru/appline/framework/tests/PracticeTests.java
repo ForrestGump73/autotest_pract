@@ -2,7 +2,7 @@ package ru.appline.framework.tests;
 
 import org.junit.jupiter.api.Test;
 import ru.appline.framework.basetestsclass.BaseTests;
-import ru.appline.framework.pages.ProductsPage;
+
 
 public class PracticeTests extends BaseTests {
 
@@ -18,15 +18,12 @@ public class PracticeTests extends BaseTests {
                 .fillFieldName("Картошка")
                 .selectTypeOfProduct("Овощ")
                 .checkboxExoticOff()
-                .saveProduct();
+                .saveProduct()
+                .checkLastProductName("Картошка")
+                .checkLastProductType("Овощ")
+                .checkLastProductExotic("false");
 
 
-        try {
-            Thread.sleep(30000);
-
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
     }
 
@@ -41,12 +38,11 @@ public class PracticeTests extends BaseTests {
                 .fillFieldName("Манго")
                 .selectTypeOfProduct("Фрукт")
                 .checkboxExoticOn()
-                .saveProduct();
+                .saveProduct()
+                .checkLastProductName("Манго")
+                .checkLastProductType("Фрукт")
+                .checkLastProductExotic("true");
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
+
 }

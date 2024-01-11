@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d07d7e5-c44d-48aa-a6a0-dd7a60c4c707" name="Changes" comment="" />
+    <list default="true" id="8d07d7e5-c44d-48aa-a6a0-dd7a60c4c707" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/appline/framework/tests/PracticeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/appline/framework/tests/PracticeTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,22 +38,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.PracticeTests (1).executor": "Run",
-    "JUnit.PracticeTests.executor": "Run",
-    "JUnit.PracticeTests.startTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/IDEA Projects/IBS/page_object_practice",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.PracticeTests (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PracticeTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PracticeTests.startTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/IDEA Projects/IBS/page_object_practice&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\IDEA Projects\IBS\page_object\src\main\resources\drivers" />
