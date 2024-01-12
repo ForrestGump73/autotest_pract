@@ -3,7 +3,6 @@ package ru.appline.framework.pages;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
 public class ProductsPage extends BasePage {
 
@@ -195,6 +194,16 @@ public class ProductsPage extends BasePage {
         checkLastProductName(name);
         checkLastProductType(type);
         checkLastProductExotic(exotic);
+        return this;
+    }
+
+    public ProductsPage refreshProductPage() {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driverManager.getDriver().navigate().refresh();
         return this;
     }
 }

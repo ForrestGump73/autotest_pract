@@ -19,6 +19,7 @@ public class PracticeTests extends BaseTests {
                 .selectTypeOfProduct("Овощ")
                 .checkboxExoticOff()
                 .saveProduct()
+                .refreshProductPage()
                 .checkLastProductAdded("Картошка", "Овощ", "false");
 
 
@@ -37,6 +38,7 @@ public class PracticeTests extends BaseTests {
                 .selectTypeOfProduct("Фрукт")
                 .checkboxExoticOn()
                 .saveProduct()
+                .refreshProductPage()
                 .checkLastProductAdded("Манго", "Фрукт", "true");
 
     }

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d07d7e5-c44d-48aa-a6a0-dd7a60c4c707" name="Changes" comment="Оптимизация метода проверки добавленного продукта" />
+    <list default="true" id="8d07d7e5-c44d-48aa-a6a0-dd7a60c4c707" name="Changes" comment="Оптимизация метода проверки добавленного продукта">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/managers/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/managers/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/managers/InitManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/managers/InitManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/managers/PageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/managers/PageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/appline/framework/pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/appline/framework/tests/PracticeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/appline/framework/tests/PracticeTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/autotest_pract",
+    "last_opened_file_path": "C:/IDEA Projects/IBS/practice",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -133,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705038055873</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Оптимизация метода проверки добавленного продукта">
+      <option name="closed" value="true" />
+      <created>1705038669073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705038669073</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

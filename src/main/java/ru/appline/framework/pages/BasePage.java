@@ -1,19 +1,17 @@
 package ru.appline.framework.pages;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.appline.framework.managers.DriverManager;
 import ru.appline.framework.managers.PageManager;
-import ru.appline.framework.managers.TestPropManager;
+
 
 import java.time.Duration;
 
 /**
- * @author Arkadiy_Alaverdyan
  * Базовый класс всех страничек
  */
 public class BasePage {
@@ -33,13 +31,6 @@ public class BasePage {
     protected PageManager pageManager = PageManager.getPageManager();
 
 
-    /**
-     * Объект для имитации реального поведения мыши или клавиатуры
-     *
-     * @see Actions
-     */
-    protected Actions action = new Actions(driverManager.getDriver());
-
 
     /**
      * Объект для выполнения любого js кода
@@ -57,13 +48,6 @@ public class BasePage {
      */
     protected WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(10), Duration.ofMillis(1000));
 
-
-    /**
-     * Менеджер properties
-     *
-     * @see TestPropManager#getTestPropManager()
-     */
-    private final TestPropManager props = TestPropManager.getTestPropManager();
 
 
     /**
@@ -91,22 +75,6 @@ public class BasePage {
     }
 
 
-    /**
-     * Функция позволяющая производить scroll до любого элемента с помощью js со смещение
-     * Смещение задается количеством пикселей по вертикали и горизонтали, т.е. смещение до точки (x, y)
-     *
-     * @param element - веб-элемент странички
-     * @param x       - параметр координаты по горизонтали
-     * @param y       - параметр координаты по вертикали
-     * @see JavascriptExecutor
-     */
-    public WebElement scrollWithOffset(WebElement element, int x, int y) {
-        String code = "window.scroll(" + (element.getLocation().x + x) + ","
-                + (element.getLocation().y + y) + ");";
-        ((JavascriptExecutor) driverManager.getDriver()).executeScript(code, element, x, y);
-        return element;
-    }
-
 
     /**
      * Явное ожидание состояния clickable элемента
@@ -122,14 +90,6 @@ public class BasePage {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    /**
-     * Явное ожидание того что элемент станет видемым
-     *
-     * @param element - веб элемент который мы ожидаем что будет  виден на странице
-     */
-    protected WebElement waitUtilElementToBeVisible(WebElement element) {
-        return wait.until(ExpectedConditions.visibilityOf(element));
-    }
 
 
     /**
@@ -143,30 +103,5 @@ public class BasePage {
 
 
 
-
-
-    /**
-     * Общий метод по заполнения полей ввода
-     *
-     * @param field - веб-элемент поле ввода
-     * @param value - значение вводимое в поле
-     */
-    protected void fillInputField(WebElement field, String value) {
-        scrollToElementJs(field);
-        waitUtilElementToBeClickable(field).click();
-        field.sendKeys(value);
-    }
-
-
-    /**
-     * Общий метод по заполнению полей с датой
-     *
-     * @param field - веб-элемент поле с датой
-     * @param value - значение вводимое в поле с датой
-     */
-    protected void fillDateField(WebElement field, String value) {
-        scrollToElementJs(field);
-        field.sendKeys(value);
-    }
 
 }

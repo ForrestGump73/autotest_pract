@@ -9,7 +9,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static ru.appline.framework.utils.PropConst.*;
 
 /**
- * @author Arkadiy_Alaverdyan
  * Класс для управления веб драйвером
  */
 public class DriverManager {
