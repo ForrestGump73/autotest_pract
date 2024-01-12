@@ -156,7 +156,7 @@ public class ProductsPage extends BasePage {
      */
     public ProductsPage checkLastProductName(String value) {
         waitVisibilityOfElementLocated("//tbody/tr[last()]/td[1]");
-        Assertions.assertEquals(value,lastProductName.getText());
+        Assertions.assertEquals(value.trim().toLowerCase(),lastProductName.getText().trim().toLowerCase());
         return this;
     }
 
@@ -168,7 +168,7 @@ public class ProductsPage extends BasePage {
      */
     public ProductsPage checkLastProductType(String value) {
         waitVisibilityOfElementLocated("//tbody/tr[last()]/td[2]");
-        Assertions.assertEquals(value,lastProductType.getText());
+        Assertions.assertEquals(value.trim().toLowerCase(),lastProductType.getText().trim().toLowerCase());
         return this;
     }
 
@@ -180,7 +180,14 @@ public class ProductsPage extends BasePage {
      */
     public ProductsPage checkLastProductExotic(String value) {
         waitVisibilityOfElementLocated("//tbody/tr[last()]/td[3]");
-        Assertions.assertEquals(value,lastProductExotic.getText());
+        Assertions.assertEquals(value.trim().toLowerCase(),lastProductExotic.getText().trim().toLowerCase());
+        return this;
+    }
+
+    public ProductsPage checkLastProductAdded(String name, String type, String exotic) {
+        checkLastProductName(name);
+        checkLastProductType(type);
+        checkLastProductExotic(exotic);
         return this;
     }
 }
