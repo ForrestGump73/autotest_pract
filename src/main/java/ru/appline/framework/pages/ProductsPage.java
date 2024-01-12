@@ -184,6 +184,13 @@ public class ProductsPage extends BasePage {
         return this;
     }
 
+    /**
+     * Проверка соответствия добавленного товара требуемому значению
+     *
+     * @param name требуемое наименование товара
+     * @param type требуемый тип товара
+     * @param exotic требуемая экзотичность товара
+     */
     public ProductsPage checkLastProductAdded(String name, String type, String exotic) {
         checkLastProductName(name);
         checkLastProductType(type);
