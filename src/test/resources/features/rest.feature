@@ -10,7 +10,7 @@
 
   Сценарий:  Добавление продукта в API
 
-    * Установка спек url="http://localhost:8080/", statuscode= 200, request.content-type = "application/json" , basePath= "api/food"
+    * Установка спек url="http://149.154.71.152:8080/", statuscode= 200, request.content-type = "application/json" , basePath= "api/food"
     * Выполнение POST-запроса и получение Cookies
       | name     | type      | exotic |
       | Картошка | VEGETABLE | false  |
@@ -22,7 +22,7 @@
 
   Сценарий:  Добавление продукта в API
 
-    * Установка спек url="http://localhost:8080/", statuscode= 200, request.content-type = "application/json" , basePath= "api/food"
+    * Установка спек url="http://149.154.71.152:8080/", statuscode= 200, request.content-type = "application/json" , basePath= "api/food"
     * Выполнение POST-запроса и получение Cookies
       | name  | type  | exotic |
       | Манго | FRUIT | true   |

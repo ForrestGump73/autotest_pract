@@ -16,7 +16,7 @@ public class JDBCsteps {
     @И("Создано подключение к БД")
     public void getConnect() {
         try {
-            Connection connect = DriverManager.getConnection("jdbc:h2:tcp://localhost:9092/mem:testdb", "user", "pass");
+            Connection connect = DriverManager.getConnection("jdbc:h2:tcp://149.154.71.152:8080/mem:testdb", "user", "pass");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
