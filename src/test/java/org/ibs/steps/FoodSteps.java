@@ -5,9 +5,11 @@ import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.То;
 import org.ibs.managers.DriverManager;
 import org.ibs.managers.PageManager;
+import org.ibs.managers.TestPropManager;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.Map;
+
 
 public class FoodSteps {
 
@@ -25,10 +27,19 @@ public class FoodSteps {
      */
     private final DriverManager driverManager = DriverManager.getDriverManager();
 
+    /**
+     * Менеджер properties
+     *
+     * @see TestPropManager#getTestPropManager()
+     */
+    private final TestPropManager props = TestPropManager.getTestPropManager();
 
-    @И("Открыта страница по адресу {string}")
-    public void beforeStep(String url) {
-        driverManager.getDriver().get(url);
+
+    @И("Открыта Главная страница")
+    public void beforeStep() {
+        if ("remote".equalsIgnoreCase(props.getProperty("type.driver"))) {
+            driverManager.getDriver().get(props.getProperty("selenoid.url"));
+        } driverManager.getDriver().get(props.getProperty("base.url"));
     }
 
     @И("Выполнено нажатие на {string}")

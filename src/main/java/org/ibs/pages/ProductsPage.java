@@ -40,7 +40,7 @@ public class ProductsPage extends BasePage {
     @FindBy(id = "exotic")
     private WebElement checkboxExotic;
 
-    @FindBy(id = "save")
+    @FindBy(xpath = "//button[normalize-space()='Сохранить']")
     private WebElement btnSave;
 
     @FindBy(xpath = "//tbody/tr[last()]/td[1]")
@@ -63,6 +63,10 @@ public class ProductsPage extends BasePage {
 
     @FindBy(xpath = "//thead/tr/th[text() = 'Экзотический']")
     private WebElement headExotic;
+
+
+
+
 
     public WebElement getDropMenu() {
         return dropMenu;
@@ -214,7 +218,12 @@ public class ProductsPage extends BasePage {
      */
     @Step("Проверка соответствия Наименования добавленного товара требуемому значению {value}")
     public ProductsPage checkLastProductName(String value) {
-        waitVisibilityOfElementLocated("//tbody/tr[last()]/td[1]");
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        waitVisibilityOfElementLocated("//thead/tr/th[text() = 'Наименование']");
         Assertions.assertEquals(value.trim().toLowerCase(),lastProductName.getText().trim().toLowerCase());
         return this;
     }
@@ -227,7 +236,7 @@ public class ProductsPage extends BasePage {
      */
     @Step("Проверка соответствия Типа добавленного товара требуемому значению {value}")
     public ProductsPage checkLastProductType(String value) {
-        waitVisibilityOfElementLocated("//tbody/tr[last()]/td[2]");
+        waitVisibilityOfElementLocated("//thead/tr/th[text() = 'Тип']");
         Assertions.assertEquals(value.trim().toLowerCase(),lastProductType.getText().trim().toLowerCase());
         return this;
     }
@@ -240,7 +249,7 @@ public class ProductsPage extends BasePage {
      */
     @Step("Проверка соответствия Экзотичности добавленного товара требуемому значению {value}")
     public ProductsPage checkLastProductExotic(String value) {
-        waitVisibilityOfElementLocated("//tbody/tr[last()]/td[3]");
+        waitVisibilityOfElementLocated("//thead/tr/th[text() = 'Экзотический']");
         Assertions.assertEquals(value.trim().toLowerCase(),lastProductExotic.getText().trim().toLowerCase());
         return this;
     }
@@ -259,4 +268,7 @@ public class ProductsPage extends BasePage {
         checkLastProductExotic(exotic);
         return this;
     }
+
+
+
 }

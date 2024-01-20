@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3ae113-0118-4125-af7d-e3921bacbbd4" name="Changes" comment="Jenkins">
-      <change beforePath="$PROJECT_DIR$/../../Практическая работа № 4 JDBC/JDBCPract/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Практическая работа № 4 JDBC/JDBCPract/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Практическая работа № 6 Хамелеон/Cham/src/test/resources/features/Добавление продукта в БД.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../../Практическая работа № 6 Хамелеон/Cham/src/test/resources/features/Добавление продукта в БД.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ibs/managers/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ibs/managers/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ibs/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ibs/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ibs/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ibs/pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibs/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibs/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/ibs/steps/FoodSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/ibs/steps/FoodSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/food.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/food.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,15 +29,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ForrestGump73"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ForrestGump73&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -58,6 +66,7 @@
     "Cucumber Java.Scenario: Добавление продукта в API.executor": "Debug",
     "Cucumber Java.Scenario: Добавление фрукта в БД.executor": "Run",
     "JUnit.AppTest.executor": "Run",
+    "JUnit.TestRunner (1).executor": "Run",
     "JUnit.TestRunner.executor": "Run",
     "JUnit.TestRunnerJDBC.executor": "Run",
     "Maven.cucumber [clean].executor": "Run",
@@ -69,7 +78,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/ibs_pract/Практическая работа № 7 Автоматизация REST/rest",
+    "last_opened_file_path": "D:/IBS/Chameleon/web-example",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
   }
 }]]></component>
@@ -87,7 +96,7 @@
       <command value="mvn test -Dorg.aspectj.weaver.Dump.exception=false" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Добавление продукта в API">
+  <component name="RunManager" selected="JUnit.TestRunner (1)">
     <configuration name="Scenario: Добавление продукта в API" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/rest.feature" />
@@ -164,8 +173,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cucumber" />
+    <configuration name="TestRunner (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="page_object_practice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.ibs.runner.*" />
@@ -181,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRunner (1)" />
         <item itemvalue="Cucumber Java.Scenario: Добавление продукта в API" />
         <item itemvalue="Cucumber Java.Scenario: Ввод корректных данных" />
         <item itemvalue="Cucumber Java.Scenario: Добавление фрукта в БД" />
         <item itemvalue="JUnit.PracticeTests.startVegTest" />
-        <item itemvalue="JUnit.TestRunner" />
       </list>
     </recent_temporary>
   </component>

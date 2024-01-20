@@ -130,6 +130,10 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    protected boolean waiter(WebElement element, String text) {
+        return wait.until(ExpectedConditions.textToBePresentInElement(element,text));
+    }
+
 
     /**
      * Явное ожидание того что элемент станет видимым
