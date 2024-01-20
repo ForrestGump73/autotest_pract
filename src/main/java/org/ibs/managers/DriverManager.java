@@ -135,7 +135,7 @@ public class DriverManager {
      * @param chrome - переменная chrome из файла application.properties в классе {@link org.ibs.utils.PropConst}
      */
     private void initDriverAnyOsFamily(String gecko, String chrome) {
-        switch (props.getProperty(TYPE_BROWSER)) {
+        switch (props.getProperty("type.browser")) {
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", props.getProperty(gecko));
                 driver = new FirefoxDriver();
@@ -151,11 +151,11 @@ public class DriverManager {
 
     private void initRemoteDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName",props.getProperty("type.browser"));
+        capabilities.setCapability("browserVersion","108.0");
         Map<String, Object> selenoidOptions = new HashMap<>();
-        selenoidOptions.put("browserName", props.getProperty("type.browser"));
         selenoidOptions.put("enableVNC",true);
         selenoidOptions.put("enableVideo",false);
-        selenoidOptions.put("browserVersion","108.0");
         capabilities.setCapability("selenoid:options",selenoidOptions);
         try {
             driver = new RemoteWebDriver(URI.create(props.getProperty("selenoid.url")).toURL(),capabilities);
